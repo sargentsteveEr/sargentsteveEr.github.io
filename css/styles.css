@@ -1,0 +1,177 @@
+/*---------------------- Overall ----------------------*/
+html {
+	height: 100%;
+}
+
+body {
+	font-family: 'Jost', sans-serif;
+	font-weight: 300;
+	color: white;
+	
+	height: 100%;
+	background-repeat: no-repeat;
+	background: linear-gradient(rgb(163, 195, 255) 0%, #5894FF 100%);
+	background-attachment: fixed;
+}
+
+footer {
+	margin: 36px 0;
+}
+
+a, a:visited {
+    color: #2873E7;
+    text-decoration: none;
+	font-weight: 500;
+}
+
+/* ---------------------- Main Header ----------------------*/ 
+.title {
+	padding-left: 80px;
+	margin-top: 20px;
+}
+
+.header {
+	font-size: 80px;
+}
+
+.header2 {
+	font-weight: 300;
+	font-size: 30px;
+	padding-left: 40px;
+}
+
+/*---------------------- Information/Links/Whatever you call them  ----------------------*/
+.info {
+	position: absolute;
+
+	margin-top: 72px;
+	padding: 12px;
+	
+	z-index: 1;
+}
+
+.info a {
+	display: inline-block;
+	margin: 30px;
+	margin-left: 6px;
+
+	color: white;
+	
+	opacity: .5;
+    transition: 1s ease;
+}
+
+.info a:hover {
+	opacity: 1;
+}
+
+.info a img {
+	position: relative;
+	filter: brightness(0) invert(1);
+	
+    height: 45px;
+	width: 45px;
+	
+    vertical-align: middle;
+}
+
+.info a:hover img {
+	filter: none;
+}
+
+
+
+.info a sctxt {
+	margin-left: 5px;
+	
+	display: none;
+	opacity: 0;
+	
+	vertical-align: middle;
+}
+
+.home .info a:hover sctxt {
+	display: inline-block;
+	opacity: 1;
+}
+
+/*---------------------- Body Text/Main Area ----------------------*/
+.main {
+	margin: 170px 28px;
+	opacity: 1;
+}
+
+/*---------------------- Containers ----------------------*/
+
+.container {
+	display: flex;
+
+}
+
+.project {
+	flex: 1 1 15%;
+	max-height: 330px;
+	min-height: 330px;
+	border-radius: 10px;
+	margin: 5px;
+	padding: 24px;
+	background: rgba(255, 255, 255, .2);
+		
+	position: relative;
+		
+	font-size: 14pt;
+	font-weight: 400;
+		
+	transition: all 0.3s ease;
+
+	overflow: hidden;
+}
+	
+.project img {
+	max-width: 65%px;
+}
+	
+.project:hover {
+	color: #0A3457;
+	background: rgba(255, 255, 255, .9);
+	max-height: 1000px;
+	flex-grow: 5;
+}
+	
+.project h2 {
+	margin: 0;
+	line-height: 1;
+}
+	
+.project .links {
+	padding-top: 6px;
+	font-size: 90%;
+	
+	transition: all 0.2s ease;
+}
+
+.project:hover .links {
+	font-size: 105%;
+}
+
+/*---------------------- Responsiveness ----------------------*/
+@media only screen and (max-width: 768px){
+	.container {
+		display: block;
+	}
+		
+	/* Header/Links */
+	.project h2 {
+		text-align: center;
+		max-width: 100%;
+	}
+
+	.project .links {
+		text-align: center;
+		font-size: 100%;
+	}
+
+	.project:hover .links {
+		font-size: 120%;
+	}
+}
